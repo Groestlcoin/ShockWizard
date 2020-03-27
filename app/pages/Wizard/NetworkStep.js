@@ -33,7 +33,7 @@ export default class LndTypeStep extends Component {
       <div className={styles.container}>
         <div className={styles.wizardStepContainer}>
           <div className={styles.lndTypeContainer}>
-            <p className={styles.stepTitle}>BITCOIN NETWORK TYPE</p>
+            <p className={styles.stepTitle}>GROESTLCOIN NETWORK TYPE</p>
             <p
               className={styles.stepDescription}
               style={{
