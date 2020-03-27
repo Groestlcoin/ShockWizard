@@ -231,6 +231,7 @@ const start = async () => {
   const lndType = (await localForage.getItem('lndType')) || 'neutrino';
   const dataDir = await getDataDir();
   child = spawn(lndExe, [
+    '--groestlcoin.active',
     `--groestlcoin.${networkType || 'testnet'}`,
     '--debuglevel=info',
     `--groestlcoin.node=${lndType}`,
