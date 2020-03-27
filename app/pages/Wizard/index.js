@@ -88,7 +88,7 @@ export default class Home extends Component {
       progress: await localForage.getItem('bitcoind_progress')
     };
     this.setProgress('lnd', LNDData);
-    this.setProgress('bitcoind', bitcoindData);
+    this.setProgress('groestlcoind', bitcoindData);
     Lnd.onData(async data => {
       console.log('onData triggered', data);
       const LNDData = {
@@ -103,7 +103,7 @@ export default class Home extends Component {
       const bitcoindData = {
         progress: await localForage.getItem('bitcoind_progress')
       };
-      this.setProgress('bitcoind', bitcoindData);
+      this.setProgress('groestlcoind', bitcoindData);
       await this.addBitcoindLogLine(data);
     });
 
@@ -259,10 +259,10 @@ export default class Home extends Component {
     const setupCompleted = await localForage.getItem('setupCompleted');
     const lndType = await localForage.getItem('lndType');
     logger.info('lndType', lndType);
-    if (setupCompleted && lndType === 'bitcoind') {
+    if (setupCompleted && lndType === 'groestlcoind') {
       await Bitcoind.download(
         {
-          version: '0.18.1',
+          version: '2.18.2',
           os: getUserPlatform(),
           osArchitecture: getUserPlatform(true)
         },
@@ -277,7 +277,7 @@ export default class Home extends Component {
       );
       await Bitcoind.start();
       this.setState({
-        lndType: 'bitcoind'
+        lndType: 'groestlcoind'
       });
     }
     return true;
@@ -362,7 +362,7 @@ export default class Home extends Component {
       return <NetworkURLStep />;
     }
 
-    if (step === 4 && lndType === 'bitcoind') {
+    if (step === 4 && lndType === 'groestlcoind') {
       return <InstallLocationStep />;
     }
 

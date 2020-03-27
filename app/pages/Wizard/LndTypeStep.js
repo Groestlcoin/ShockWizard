@@ -63,11 +63,11 @@ export default class LndTypeStep extends Component {
                 />
                 <span className={styles.checkmark} />
                 <div className={styles.choiceInfoContainer}>
-                  <b>Bitcoin Core</b>
+                  <b>Groestlcoin Core</b>
                   <p className={styles.radioDesc}>
                     Discerning users that require a fully-validating, trustless node, should opt to
-                    install Bitcoin Core. This currently requires at minimum 300GB of disk space,
-                    and may require from 8-24 hours to fully synchronize.
+                    install Groestlcoin Core. This currently requires at minimum 10GB of disk space,
+                    and may require from 1-5 hours to fully synchronize.
                   </p>
                 </div>
               </label>

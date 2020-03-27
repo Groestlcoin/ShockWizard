@@ -38,7 +38,7 @@ export default class RPCStep extends Component {
                 textAlign: 'left'
               }}
             >
-              Please input the credentials for your Bitcoin Core RPC
+              Please input the credentials for your Groestlcoin Core RPC
             </p>
             <div className={styles.stepChoices} style={{ width: '100%' }}>
               <div className={styles.stepInputContainer} style={{ width: '100%' }}>

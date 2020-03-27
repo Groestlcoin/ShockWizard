@@ -150,7 +150,7 @@ const processLine = async line => {
             const walletUnlocked = await localForage.getItem('walletUnlocked');
             // eslint-disable-next-line no-new
             new Notification('Network sync is complete!', {
-              body: `Node has completed initial sync with the Bitcoin network! ${
+              body: `Node has completed initial sync with the Groestlcoin network! ${
                 walletUnlocked ? '' : 'Connect with ShockWallet to interact with it'
               }`
             });
@@ -195,7 +195,7 @@ const processLine = async line => {
             body: `The LND instance is now unlocked! ${
               downloadedBlocks >= downloadedBlockHeightsLength
                 ? ''
-                : 'Please wait while the node syncs with the Bitcoin network'
+                : 'Please wait while the node syncs with the Groestlcoin network'
             }`
           });
           if (downloadedBlocks >= downloadedBlockHeightsLength) {

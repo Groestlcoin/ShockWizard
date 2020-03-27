@@ -16,7 +16,7 @@ export default class IntroStep extends Component {
             <br />
             <br />
             This tool will walk you through the setup of your own Lightning node for use with the
-            ShockWallet App, and if desired, a fully-validating Bitcoin Core node.
+            ShockWallet App, and if desired, a fully-validating Groestlcoin Core node.
             <br />
             <br />
             Please submit any issues or requests for support at{' '}
