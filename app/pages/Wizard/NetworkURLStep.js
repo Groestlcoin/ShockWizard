@@ -13,9 +13,9 @@ export default class NetworkURLStep extends Component {
   componentDidMount = async () => {
     const networkType = await localForage.getItem('networkType');
     if (networkType === 'testnet') {
-      this.setOption('networkUrl', 'faucet.lightning.community');
+      this.setOption('networkUrl', 'grsd-testnet.groestlcoin.org');
     } else {
-      this.setOption('networkUrl', 'neutrino.shock.network');
+      this.setOption('networkUrl', 'grsd-mainnet.groestlcoin.org');
     }
   };
 
