@@ -28,23 +28,24 @@ const saveBitcoindConfig = ({ config, bitcoindPath }) =>
 
     fs.writeFile(bitcoindPath, configText, (err, data) => (err ? reject(err) : resolve(data)));
   });
-
-const download = async ({ version, os, osArchitecture }, progressCallback) => {
+  //https://github.com/Groestlcoin/groestlcoin/releases/v2.18.2/groestlcoin-2.18.2-x86_64-linux-gnu.tar.gz
+  //https://github.com/Groestlcoin/groestlcoin/releases/download/v2.18.2/groestlcoin-2.18.2-x86_64-linux-gnu.tar.gz
+  const download = async ({ version, os, osArchitecture }, progressCallback) => {
   const folderPath = await getFolderPath();
-  const fileName = `bitcoin-${version}-${osArchitecture}.${os === 'linux' ? 'tar.gz' : 'zip'}`;
-  if (!fs.existsSync(path.resolve(folderPath, 'bitcoind'))) {
+  const fileName = `groestlcoin-${version}-${osArchitecture}.${os === 'linux' ? 'tar.gz' : 'zip'}`;
+  if (!fs.existsSync(path.resolve(folderPath, 'groestlcoind'))) {
     await Downloader.downloadFile(
       {
-        downloadUrl: `https://bitcoincore.org/bin/bitcoin-core-${version}/${fileName}`,
-        fileName: 'bitcoind',
-        extractedFolderName: `bitcoin-${version}`
+        downloadUrl: `http://github.com/Groestlcoin/groestlcoin/releases/download/v${version}/${fileName}`,
+        fileName: 'groestlcoind',
+        extractedFolderName: `groestlcoin-${version}`
       },
       progressCallback
     );
     return true;
   }
   progressCallback({
-    app: 'bitcoind',
+    app: 'groestlcoind',
     progress: 100
   });
 };
@@ -105,10 +106,10 @@ const processLine = async line => {
           const walletUnlocked = await localForage.getItem('bitcoind_walletUnlocked');
           // eslint-disable-next-line no-new
           new Notification('Network sync is complete!', {
-            body: `Node has completed initial sync with the Bitcoin network! ${
+            body: `Node has completed initial sync with the Groestlcoin network! ${
               walletUnlocked ? '' : 'Connect with ShockWallet to interact with it'
             }`
-          });
+          });github.com/Groestlcoin/groestlcoin
         } else if (key === 'walletUnlocked') {
           const downloadedBlocks = await localForage.getItem('bitcoind_downloadedBlocks');
           // eslint-disable-next-line no-new
@@ -116,7 +117,7 @@ const processLine = async line => {
             body: `The LND instance is now unlocked! ${
               downloadedBlocks >= downloadedBlockHeightsLength
                 ? ''
-                : 'Please wait while the node syncs with the Bitcoin network'
+                : 'Please wait while the node syncs with the Groestlcoin network'
             }`
           });
         }
@@ -138,12 +139,12 @@ const start = async () => {
   const os = getUserPlatform();
   const bitcoindExe = path.resolve(
     folderPath,
-    'bitcoind',
+    'groestlcoind',
     'bin',
-    `bitcoind${os === 'windows' ? '.exe' : ''}`
+    `groestlcoind${os === 'windows' ? '.exe' : ''}`
   );
-  const dataDir = path.resolve(folderPath, 'bitcoind', 'data');
-  if (lndType !== 'bitcoind') {
+  const dataDir = path.resolve(folderPath, 'groestlcoind', 'data');
+  if (lndType !== 'groestlcoind') {
     return;
   }
   if (!fs.existsSync(dataDir)) {
@@ -160,12 +161,12 @@ const start = async () => {
       datadir: dataDir,
       server: 1,
       listen: 0,
-      zmqpubrawtx: 'tcp://127.0.0.1:28333',
-      zmqpubrawblock: 'tcp://127.0.0.1:28332',
+      zmqpubrawtx: 'tcp://127.0.0.1:29000',
+      zmqpubrawblock: 'tcp://127.0.0.1:29000',
       rpcuser: 'test',
       rpcpass: 'test'
     },
-    bitcoindPath: path.resolve(folderPath, 'bitcoind', 'data', 'bitcoin.conf')
+    bitcoindPath: path.resolve(folderPath, 'groestlcoind', 'data', 'groestlcoin.conf')
   });
   child.stdout.on('data', data => {
     const line = data.toString();
