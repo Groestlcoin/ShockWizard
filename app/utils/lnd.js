@@ -73,7 +73,7 @@ const download = async ({ version, os: operatingSystem }, progressCallback) => {
     await Downloader.downloadRelease(
       {
         version,
-        user: 'lightningnetwork',
+        user: 'Groestlcoin',
         repo: 'lnd',
         fileName
       },
