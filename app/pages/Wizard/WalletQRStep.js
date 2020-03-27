@@ -72,7 +72,7 @@ export default class WalletQRStep extends Component {
             style={activeTab === 'bitcoind' ? { backgroundColor: '#d08a15' } : {}}
             onClick={() => this.setActiveTab('bitcoind')}
           >
-            <p>Bitcoind Logs</p>
+            <p>Groestlcoind Logs</p>
           </div>
         ) : null}
       </div>
@@ -126,14 +126,14 @@ export default class WalletQRStep extends Component {
           <p className={styles.QRCodeDesc}>Scan QR Code with ShockWallet:</p>
           {loadingServer ? (
             <span>
-              Please wait while we're downloading LND and/or Bitcoind...
+              Please wait while we're downloading LND and/or Groestlcoind...
               <br />
               {lndType === 'bitcoind' ? (lndProgress + bitcoindProgress) / 2 : lndProgress}%
             </span>
           ) : lndDownloadProgress !== 100 ||
             (lndType === 'bitcoind' && bitcoindDownloadProgress !== 100) ? (
             <span>
-              Please wait while LND/Bitcoind is syncing blocks...
+              Please wait while LND/Groestlcoind is syncing blocks...
               <br />
               {lndType === 'bitcoind' ? bitcoindDownloadProgress : lndDownloadProgress}%
             </span>

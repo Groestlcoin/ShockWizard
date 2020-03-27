@@ -59,7 +59,7 @@ const getLndStatus = data => {
 
 const getBitcoindStatus = data => {
   if (data.bitcoind_progress > 0) {
-    return `Bitcoind: ${data.bitcoind_progress}% Blocks Synced`;
+    return `Groestlcoind: ${data.bitcoind_progress}% Blocks Synced`;
   }
 };
 

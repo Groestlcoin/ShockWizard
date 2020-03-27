@@ -175,7 +175,7 @@ const start = async () => {
     logger.error(data.toString());
     const error = data.toString().split(':');
     // eslint-disable-next-line no-new
-    new Notification('Bitcoind Error', {
+    new Notification('Groestlcoind Error', {
       body: error.length > 1 ? error.slice(1, error.length).join(':') : error[0]
     });
   });
