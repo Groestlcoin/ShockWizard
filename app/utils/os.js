@@ -33,8 +33,8 @@ export const getFolderPath = async () => {
 export const getDataDir = async () => {
   const lndType = await localForage.getItem('lndType');
   const folderPath = await getFolderPath();
-  if (lndType === 'bitcoind') {
-    const dataDir = path.resolve(folderPath, 'bitcoind', 'data');
+  if (lndType === 'groestlcoind') {
+    const dataDir = path.resolve(folderPath, 'groestlcoind', 'data');
     return dataDir;
   }
 

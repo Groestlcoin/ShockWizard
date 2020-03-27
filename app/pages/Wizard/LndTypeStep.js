@@ -57,9 +57,9 @@ export default class LndTypeStep extends Component {
                 <input
                   type="radio"
                   name="lnd-type"
-                  value="bitcoind"
+                  value="groestlcoind"
                   onChange={e => this.setOption('lndType', e.target.value)}
-                  checked={lndType === 'bitcoind'}
+                  checked={lndType === 'groestlcoind'}
                 />
                 <span className={styles.checkmark} />
                 <div className={styles.choiceInfoContainer}>

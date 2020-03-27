@@ -66,11 +66,11 @@ export default class WalletQRStep extends Component {
         >
           <p>LND Logs</p>
         </div>
-        {lndType === 'bitcoind' ? (
+        {lndType === 'groestlcoind' ? (
           <div
             className={styles.stepTab}
-            style={activeTab === 'bitcoind' ? { backgroundColor: '#d08a15' } : {}}
-            onClick={() => this.setActiveTab('bitcoind')}
+            style={activeTab === 'groestlcoind' ? { backgroundColor: '#d08a15' } : {}}
+            onClick={() => this.setActiveTab('groestlcoind')}
           >
             <p>Groestlcoind Logs</p>
           </div>
@@ -128,14 +128,14 @@ export default class WalletQRStep extends Component {
             <span>
               Please wait while we're downloading LND and/or Groestlcoind...
               <br />
-              {lndType === 'bitcoind' ? (lndProgress + bitcoindProgress) / 2 : lndProgress}%
+              {lndType === 'groestlcoind' ? (lndProgress + bitcoindProgress) / 2 : lndProgress}%
             </span>
           ) : lndDownloadProgress !== 100 ||
-            (lndType === 'bitcoind' && bitcoindDownloadProgress !== 100) ? (
+            (lndType === 'groestlcoind' && bitcoindDownloadProgress !== 100) ? (
             <span>
               Please wait while LND/Groestlcoind is syncing blocks...
               <br />
-              {lndType === 'bitcoind' ? bitcoindDownloadProgress : lndDownloadProgress}%
+              {lndType === 'groestlcoind' ? bitcoindDownloadProgress : lndDownloadProgress}%
             </span>
           ) : (
             <QRCode

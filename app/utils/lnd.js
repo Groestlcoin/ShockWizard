@@ -236,14 +236,9 @@ const start = async () => {
     '--debuglevel=info',
     `--groestlcoin.node=${lndType}`,
     `--datadir=${dataDir}`,
-    ...(lndType === 'bitcoind'
+    ...(lndType === 'groestlcoind'
       ? [
-          `--bitcoind.dir=${dataDir}`,
-          '--bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333',
-          '--bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332',
-          '--bitcoind.rpcuser=test',
-          '--bitcoind.rpcpass=test',
-          '--bitcoind.rpchost=localhost'
+          '--groestlcoind.rpcuser=test',
         ]
       : [`--neutrino.connect=${networkUrl}`])
   ]);
