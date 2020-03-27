@@ -238,7 +238,12 @@ const start = async () => {
     `--datadir=${dataDir}`,
     ...(lndType === 'groestlcoind'
       ? [
+          `--groestlcoind.dir=${dataDir}`,
+          '--groestlcoind.zmqpubrawtx=tcp://127.0.0.1:28333',
+          '--groestlcoind.zmqpubrawblock=tcp://127.0.0.1:28332',
           '--groestlcoind.rpcuser=test',
+          '--groestlcoind.rpcpass=test',
+          '--groestlcoind.rpchost=localhost'
         ]
       : [`--neutrino.connect=${networkUrl}`])
   ]);
