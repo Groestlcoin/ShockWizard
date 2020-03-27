@@ -51,7 +51,7 @@ const getLndDirectory = () => {
   }
 
   if (platform.toLowerCase() === 'linux') {
-    return `${homeDir}/.lnd`;
+    return `${homeDir}/.lnd-grs`;
   }
 
   return path.resolve(process.env.APPDATA, '../Local/Lnd'); // Windows not implemented yet
