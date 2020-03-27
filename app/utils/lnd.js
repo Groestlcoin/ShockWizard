@@ -180,7 +180,7 @@ const processLine = async line => {
           const serverConfig = {
             serverhost: '0.0.0.0',
             lndCertPath: `${lndDirectory}/tls.cert`,
-            macaroonPath: `${dataDir}/chain/bitcoin/${
+            macaroonPath: `${dataDir}/chain/groestlcoin/${
               networkType ? networkType : 'testnet'
             }/admin.macaroon`
           };
@@ -206,7 +206,7 @@ const processLine = async line => {
             const serverConfig = {
               serverhost: '0.0.0.0',
               lndCertPath: `${lndDirectory}/tls.cert`,
-              macaroonPath: `${dataDir}/chain/bitcoin/${
+              macaroonPath: `${dataDir}/chain/groestlcoin/${
                 networkType ? networkType : 'testnet'
               }/admin.macaroon`
             };
@@ -231,10 +231,9 @@ const start = async () => {
   const lndType = (await localForage.getItem('lndType')) || 'neutrino';
   const dataDir = await getDataDir();
   child = spawn(lndExe, [
-    '--bitcoin.active',
-    `--bitcoin.${networkType || 'testnet'}`,
+    `--groestlcoin.${networkType || 'testnet'}`,
     '--debuglevel=info',
-    `--bitcoin.node=${lndType}`,
+    `--groestlcoin.node=${lndType}`,
     `--datadir=${dataDir}`,
     ...(lndType === 'bitcoind'
       ? [
