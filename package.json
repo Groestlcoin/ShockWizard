@@ -1,7 +1,7 @@
 {
   "name": "GroestlcoinShockWizard",
   "productName": "Groestlcoin ShockWizard",
-  "version": "0.0.44",
+  "version": "0.0.47",
   "description": "Setup a Lightning Node Automatically!",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
