@@ -123,7 +123,7 @@ export default class WalletQRStep extends Component {
           </label>
         </div>
         <div className={styles.walletQRCode}>
-          <p className={styles.QRCodeDesc}>Scan QR Code with ShockWallet:</p>
+          <p className={styles.QRCodeDesc}>Scan QR Code with Groestlcoin ShockWallet:</p>
           {loadingServer ? (
             <span>
               Please wait while we're downloading LND and/or Groestlcoind...

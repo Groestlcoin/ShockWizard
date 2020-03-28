@@ -107,7 +107,7 @@ const processLine = async line => {
           // eslint-disable-next-line no-new
           new Notification('Network sync is complete!', {
             body: `Node has completed initial sync with the Groestlcoin network! ${
-              walletUnlocked ? '' : 'Connect with ShockWallet to interact with it'
+              walletUnlocked ? '' : 'Connect with Groestlcoin ShockWallet to interact with it'
             }`
           });github.com/Groestlcoin/groestlcoin
         } else if (key === 'walletUnlocked') {
