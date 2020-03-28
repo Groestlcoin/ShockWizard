@@ -47,14 +47,14 @@ const getLndDirectory = () => {
   const platform = os.platform();
   const homeDir = os.homedir();
   if (platform.toLowerCase() === 'darwin') {
-    return `${homeDir}/Library/Application Support/Lnd`;
+    return `${homeDir}/Library/Application Support/Lnd-grs`;
   }
 
   if (platform.toLowerCase() === 'linux') {
     return `${homeDir}/.lnd-grs`;
   }
 
-  return path.resolve(process.env.APPDATA, '../Local/Lnd'); // Windows not implemented yet
+  return path.resolve(process.env.APPDATA, '../Local/Lnd-grs'); // Windows not implemented yet
 };
 
 const lndDirectory = getLndDirectory();
