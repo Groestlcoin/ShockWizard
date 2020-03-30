@@ -64,7 +64,7 @@
   margin: 0;
   color: #fefefe;
   text-align: center;
-  background-color: #1f3d74;
+  background-color: #005E78;
 }
 
 .logo {
@@ -76,7 +76,7 @@
 }
 
 .shockLogo .bold {
-  color: #f5a623;
+  color: #00A5BD;
 }
 
 .lndTypeContainer.nodeInfo {
@@ -122,14 +122,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #294f93;
+  background-color: #005E78;
 }
 
 .stepTab {
   width: 50%;
   text-align: center;
   font-weight: bold;
-  background-color: #294f93;
+  background-color: #005E78;
   cursor: pointer;
 }
 
@@ -145,7 +145,7 @@
   top: 100px;
   left: 0;
   width: 100%;
-  background-color: #f5a623;
+  background-color: #00A5BD;
 }
 
 .divider {
@@ -260,7 +260,7 @@
   height: 12px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #f5a623;
+  background: #00A5BD;
 }
 
 /* Show the indicator (dot/circle) when checked */
@@ -288,7 +288,7 @@
   align-items: center;
   border-radius: 50px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: #f5a623;
+  background-color: #00A5BD;
   color: #efefef;
   text-transform: uppercase;
   cursor: pointer;
@@ -297,7 +297,7 @@
 .stepControlsBar .controlsBtn.prev {
   position: relative;
   padding-left: 50px;
-  background-color: rgba(63, 169, 245, 1);
+  background-color: rgba(0, 101, 147, 1);
   color: white;
 }
 
@@ -324,7 +324,7 @@
   padding: 7px 10px;
   border: 0;
   border-radius: 100px;
-  background-color: #1f3d74;
+  background-color: #005E78;
   color: white;
   font-family: Montserrat, sans-serif;
 }
@@ -342,7 +342,7 @@
   font-weight: bold;
   padding: 7px 15px;
   border-radius: 100px;
-  background-color: #f5a623;
+  background-color: #00618F;
   text-transform: uppercase;
   flex-shrink: 0;
   margin-left: 10px;

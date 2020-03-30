@@ -139,7 +139,7 @@ export default class WalletQRStep extends Component {
             </span>
           ) : (
             <QRCode
-              bgColor="#F5A623"
+              bgColor="#00A5BD"
               fgColor="#21355a"
               value={`{ "externalIP": "${externalIP}", "internalIP": "${internalIP}", "walletPort": "${walletPort}" }`}
               ecLevel="M"
