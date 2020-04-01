@@ -161,8 +161,8 @@ const start = async () => {
       datadir: dataDir,
       server: 1,
       listen: 0,
-      zmqpubrawtx: 'tcp://127.0.0.1:29000',
-      zmqpubrawblock: 'tcp://127.0.0.1:29000',
+      zmqpubrawtx: 'tcp://127.0.0.1:21331',
+      zmqpubrawblock: 'tcp://127.0.0.1:21441',
       rpcuser: 'test',
       rpcpass: 'test'
     },
