@@ -44,14 +44,14 @@ export default class InstallLocationStep extends Component {
       <div className={styles.container}>
         <div className={styles.wizardStepContainer}>
           <div className={styles.lndTypeContainer}>
-            <p className={styles.stepTitle}>BITCOIN DATA LOCATION</p>
+            <p className={styles.stepTitle}>GROESTLCOIN DATA LOCATION</p>
             <p
               className={styles.stepDescription}
               style={{
                 textAlign: 'left'
               }}
             >
-              Please specify the folder in which you would like to store the bitcoin chain data
+              Please specify the folder in which you would like to store the Groestlcoin chain data
               (leave blank to install on default path):
             </p>
             <div className={styles.stepInputContainer}>
