@@ -21,13 +21,13 @@ export default class IntroStep extends Component {
             <br />
             Please submit any issues or requests for support at{' '}
             <a
-              href="https://github.com/shocknet/Wizard/issues"
+              href="https://github.com/Groestlcoin/ShockWizard/issues"
               onClick={e => {
                 e.preventDefault();
-                shell.openExternal('https://github.com/shocknet/Wizard/issues');
+                shell.openExternal('https://github.com/Groestlcoin/ShockWizard/issues');
               }}
             >
-              https://github.com/shocknet/Wizard/issues
+              https://github.com/Groestlcoin/ShockWizard/issues
             </a>
           </p>
         </div>

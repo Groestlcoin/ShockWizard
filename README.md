@@ -49,7 +49,7 @@ $ yarn package
 
 <hr></hr>
 
-**If you find any issues with this project, or would like to suggest an enhancement, please [tell us](https://github.com/shocknet/Wizard/issues).**
+**If you find any issues with this project, or would like to suggest an enhancement, please [tell us](https://github.com/Groestlcoin/ShockWizard/issues).**
 
 [ISC License](https://opensource.org/licenses/ISC)
 © 2020 [Shock Network, Inc.](http://shock.network)
