@@ -47,8 +47,8 @@ export default class LndTypeStep extends Component {
                 <div className={styles.choiceInfoContainer}>
                   <b>Neutrino</b>
                   <p className={styles.radioDesc}>
-                    A privacy preserving protocol for reading compressed blockchain data. Shock
-                    Network provides default public Neutrino servers on Mainnet or Testnet.
+                    A privacy preserving protocol for reading compressed blockchain data. Groestlcoin 
+                    Shock Network provides default public Neutrino servers on Mainnet or Testnet.
                     Alternatively, you can specify different servers.
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default class LndTypeStep extends Component {
                   <b>Groestlcoin Core</b>
                   <p className={styles.radioDesc}>
                     Discerning users that require a fully-validating, trustless node, should opt to
-                    install Groestlcoin Core. This currently requires at minimum 10GB of disk space,
+                    install Groestlcoin Core. This currently requires at minimum 3GB of disk space,
                     and may require from 1-5 hours to fully synchronize.
                   </p>
                 </div>

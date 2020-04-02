@@ -54,14 +54,14 @@ export default class WalletQRStep extends Component {
       <div className={styles.stepTabs}>
         <div
           className={styles.stepTab}
-          style={activeTab === 'info' ? { backgroundColor: '#d08a15' } : {}}
+          style={activeTab === 'info' ? { backgroundColor: '#00618F' } : {}}
           onClick={() => this.setActiveTab('info')}
         >
           <p>Information</p>
         </div>
         <div
           className={styles.stepTab}
-          style={activeTab === 'lnd' ? { backgroundColor: '#d08a15' } : {}}
+          style={activeTab === 'lnd' ? { backgroundColor: '#00618F' } : {}}
           onClick={() => this.setActiveTab('lnd')}
         >
           <p>LND Logs</p>
@@ -69,7 +69,7 @@ export default class WalletQRStep extends Component {
         {lndType === 'groestlcoind' ? (
           <div
             className={styles.stepTab}
-            style={activeTab === 'groestlcoind' ? { backgroundColor: '#d08a15' } : {}}
+            style={activeTab === 'groestlcoind' ? { backgroundColor: '#00618F' } : {}}
             onClick={() => this.setActiveTab('groestlcoind')}
           >
             <p>Groestlcoind Logs</p>

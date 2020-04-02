@@ -116,7 +116,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shocknet/Wizard.git"
+    "url": "git+https://github.com/Groestlcoin/ShockWizard.git"
   },
   "author": {
     "name": "Groestlcoin ShockWallet",
